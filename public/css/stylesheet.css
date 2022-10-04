@@ -1,0 +1,55 @@
+body{
+    background-color: #fff3b8;
+}
+
+main{
+    width: 700px;
+    margin: 0 auto;
+}
+.page-title ,.message{
+    text-align: center;
+}
+
+table{
+    width: 500px;
+    margin: 0 auto;
+}
+
+td{
+    height: 40px;
+    line-height: 40px;
+}
+
+.form-item-input{
+    float: right;
+}
+
+.name{
+    margin-left: 7px;
+}
+
+.bottun{
+    text-align: center;
+}
+
+.btn{
+    width:170px;
+    padding:3px 7px;
+    border-radius:5px;
+    margin-top: 20px;
+}
+
+.confirm{
+    background-color:#f39800;
+    color: white;
+}
+
+.former{
+    background-color:white;
+    color: #f39800;
+}
+
+.error{
+    color: red;
+    font-size: small;
+}
