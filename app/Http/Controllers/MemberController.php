@@ -15,7 +15,7 @@ class MemberController extends Controller
         'name_sei' => ['required','max:20'],
         'name_mei' => ['required','max:20'],
         'nickname' => ['required','max:10'],
-        'gender' => ['required','numeric'],
+        'gender' => ['required','integer','between:1,2'],
         'password' => ['required','regex:/^([a-zA-Z0-9]{8,20})$/','confirmed:password'],
         'password_confirmation' => ['required','regex:/^([a-zA-Z0-9]{8,20})$/'],
         'email' => ['required','max:200','email','unique:members,email'],
