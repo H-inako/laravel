@@ -31,4 +31,4 @@ Route::get('member_regist', 'MemberController@show')->name('regist_show');
 Route::post('member_regist','MemberController@post')->name('regist_post');
 Route::get('member_confirmation', 'MemberController@confirm')->name('confirmation_confirm');
 Route::post('member_confirmation','MemberController@add')->name('confirmation_add');
-Route::post('member_registered','MemberController@complete')->name('member_registered');
+Route::get('member_registered','MemberController@complete')->name('member_registered');

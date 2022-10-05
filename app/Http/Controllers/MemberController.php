@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Member;
 use Validator;
 
 class MemberController extends Controller
 {
 
-    private $formItems = ["name_sei","name_mei","nickname","gender","password", "email"];
+    private $formItems = ["name_sei","name_mei","nickname","gender","password","password_confirmation", "email"];
 
     private $validator = [
         'name_sei' => ['required','max:20'],
@@ -45,12 +45,15 @@ class MemberController extends Controller
     public function confirm(Request $request){
 		//セッションから値を取り出す
 		$input = $request->session()->get("form_input");
-		
+        $gender_num = $input['gender'];
+		$gender = config('master.gender');
+        $seibetsu = $gender["$gender_num"];
 		//セッションに値が無い時はフォームに戻る
 		if(!$input){
 			return redirect()->action("MemberController@show");
 		}
-		return view("member_confirmation",["input" => $input]);
+
+		return view("member_confirmation",compact('input' ,'gender','gender_num','seibetsu'));
     }
 
     //データベース登録
@@ -64,6 +67,15 @@ class MemberController extends Controller
 		}
 
 		//データベースに登録
+        $member = new Member;
+        $member ->name_sei = $input['name_sei'];
+        $member ->name_mei = $input['name_mei'];
+        $member ->nickname = $input['nickname'];
+        $member ->gender = $input['gender'];
+        $member ->password = bcrypt($input['password']);
+        $member ->email = $input['email'];
+        
+        $member->save();
 
 		//セッションを空にする
 		$request->session()->forget("form_input");
