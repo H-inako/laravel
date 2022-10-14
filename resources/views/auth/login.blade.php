@@ -19,11 +19,7 @@
                             <td class="form-item-input">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}">
                             </td>
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+
                             </div>
                         </div>
                     </tr>
@@ -34,13 +30,25 @@
                             <td class="form-item-input">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                             </td>
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+
                             </div>
                         </div>
+                    </tr>
+                    <tr>
+                        <td class="form-label">
+                        </td>
+                        <td class="form-item-input">
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong class="error">{{ $message }}</strong>
+                            </span>
+                            @enderror
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong class="error">{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
