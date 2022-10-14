@@ -45,4 +45,12 @@
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
   ),
+  'oscarafdev/migrations-generator' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Way\\Generators\\GeneratorsServiceProvider',
+      1 => 'OscarAFDev\\MigrationsGenerator\\MigrationsGeneratorServiceProvider',
+    ),
+  ),
 );

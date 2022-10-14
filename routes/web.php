@@ -15,20 +15,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*　会員登録　*/
-//Route::get('/member_regist', function () {
-    //return view('member_regist');
-//});
-
 /* ログイン認証機能 */
 Auth::routes(
-    //['register' => false] //登録機能をoff
+
 );
+/* ログアウト */
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+/*　会員登録　*/
 Route::get('member_regist', 'MemberController@show')->name('regist_show');
 Route::post('member_regist','MemberController@post')->name('regist_post');
 Route::get('member_confirmation', 'MemberController@confirm')->name('confirmation_confirm');
 Route::post('member_confirmation','MemberController@add')->name('confirmation_add');
 Route::get('member_registered','MemberController@complete')->name('member_registered');
+
+/* トップページ */
+Route::get('/top', function () {
+    return view('top');
+})->name('top');
+
+Route::get('/password_reset_message', function () {
+    return view('password_reset_message');
+})->name('password_reset_message');

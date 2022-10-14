@@ -101,6 +101,9 @@
             <input class="btn confirm" type="submit" value="確認画面へ">
             </div>
             </form> 
+            <div class="bottun">
+                <a class="btn former" href="{{ route('top') }}">トップへ戻る</a>
+            </div>
         </main>
     </body>
 </html>

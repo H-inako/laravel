@@ -66,7 +66,7 @@ trait ResetsPasswords
         return [
             'token' => 'required',
             'email' => 'required|email',
-            'password' => 'required|confirmed|min:8',
+            'password' => 'required|confirmed|regex:/^([a-zA-Z0-9]{8,20})$/',
         ];
     }
 
@@ -104,7 +104,7 @@ trait ResetsPasswords
     {
         $this->setUserPassword($user, $password);
 
-        $user->setRememberToken(Str::random(60));
+       // $user->setRememberToken(Str::random(60));
 
         $user->save();
 
@@ -135,7 +135,9 @@ trait ResetsPasswords
     protected function sendResetResponse(Request $request, $response)
     {
         return redirect($this->redirectPath())
-                            ->with('status', trans($response));
+                           ->with('status', trans($response));
+               
+        //return redirect()->route('top');
     }
 
     /**

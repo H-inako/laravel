@@ -70,7 +70,8 @@ trait SendsPasswordResetEmails
      */
     protected function sendResetLinkResponse(Request $request, $response)
     {
-        return back()->with('status', trans($response));
+        //return back()->with('status', trans($response));
+        return redirect(url('/password_reset_message'));
     }
 
     /**

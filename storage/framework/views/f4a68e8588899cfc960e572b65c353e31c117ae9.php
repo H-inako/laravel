@@ -14,6 +14,9 @@
             <div class="message">
             <span>会員登録が完了しました。</span>
             </div>
+            <div class="bottun">
+                <a class="btn former" href="<?php echo e(route('top')); ?>">トップへ戻る</a>
+            </div>
         </main>
     </body>
 </html><?php /**PATH /var/www/laravel/resources/views/member_registered.blade.php ENDPATH**/ ?>
