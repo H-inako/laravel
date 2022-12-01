@@ -18,6 +18,7 @@ body{
     margin: 0 auto;
 }
 
+
 h2{
     font-weight: normal;
     font-size: 20px;
@@ -25,7 +26,7 @@ h2{
     margin-bottom: 30px;
 }
 
-.bottun-list{
+.button-list{
     list-style: none;
     float:right ;
     margin-top: 20px;
@@ -65,8 +66,11 @@ table{
 }
 
 td{
-    height: 40px;
-    line-height: 40px;
+    padding: 10px;
+}
+
+.form-label{
+    width: 35%;
 }
 
 .form-item-input{
@@ -90,7 +94,7 @@ td{
     background-color: white;
 }
 
-.bottun{
+.button{
     text-align: center;
 }
 
@@ -105,7 +109,7 @@ td{
     font-size: small;
 }
 
-.bottun a{
+.button a{
     display : inline-block;
     padding :3px 0;
 }
@@ -123,4 +127,8 @@ td{
 .error{
     color: red;
     font-size: small;
+}
+
+.show_image{
+    width:100px;
 }

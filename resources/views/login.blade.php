@@ -41,10 +41,10 @@
                     </tr>
                 </table>
             </div>
-            <div class="bottun">
+            <div class="button">
             <input class="btn confirm" type="submit" value="ログイン">
             </div>
-            <div class="bottun">
+            <div class="button">
                 <a class="btn former" href="{{ route('top') }}">トップへ戻る</a>
             </div>
             </form> 

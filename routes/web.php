@@ -39,3 +39,15 @@ Route::get('/top', function () {
 Route::get('/password_reset_message', function () {
     return view('password_reset_message');
 })->name('password_reset_message');
+
+/* 商品登録 */
+Route::get('product_regist', 'ProductController@show')->name('product_regist_show');
+Route::post('product_regist', 'ProductController@post')->name('product_post');
+Route::get('product_confirmation', 'ProductController@confirm')->name('product_confirm');
+Route::post('product_confirmation', 'ProductController@add')->name('product_add');
+//小カテゴリ
+Route::post('/subcategory','ProductController@subcategory');
+//画像アップロード
+Route::post('/images', 'ProductController@imageUpload');
+
+?>

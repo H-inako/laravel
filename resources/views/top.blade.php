@@ -14,12 +14,13 @@
                     <?php $user = Auth::user(); ?>{{ $user->name_sei }} {{ $user->name_mei }}様
                 </div>
                 @endauth
-                <ul class=bottun-list>
+                <ul class="button-list">
                     @guest
                 <li class="list"><a class="list-btn" href="{{ route('regist_show') }}">新規会員登録</a></li>
                 <li class="list"><a class="list-btn" href="{{ route('login') }}">ログイン</a></li>
                 @endguest
                 @auth
+                <li class="list"><a class="list-btn" href="{{ route('product_regist_show') }}">新規商品登録</a></li>
                 <li class="list"><a class="list-btn" href="{{ route('logout') }}">ログアウト</a></li>
                 @endauth
                 </ul> 

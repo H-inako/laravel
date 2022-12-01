@@ -17,7 +17,7 @@
                 『パスワード再設定URL』 をクリックし、<br>
                 パスワードの再設定を完了させてください。</p>
             </div>
-                <div class="bottun">
+                <div class="button">
                     <a class="btn former" href="{{ route('top') }}">トップへ戻る</a>
                 </div>
         </main>

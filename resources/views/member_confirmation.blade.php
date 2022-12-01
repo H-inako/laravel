@@ -41,10 +41,10 @@
                     </tr>
                 </table>
             </div>
-            <div class="bottun">
+            <div class="button">
             <input class="btn confirm" type="submit" value="登録完了">
             </div>
-            <div class="bottun">
+            <div class="button">
             <button class="btn former" type="button" onclick="history.back()">前に戻る</button>
             </div>
             </form> 

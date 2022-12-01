@@ -14,7 +14,7 @@
             <div class="message">
             <span>会員登録が完了しました。</span>
             </div>
-            <div class="bottun">
+            <div class="button">
                 <a class="btn former" href="{{ route('top') }}">トップへ戻る</a>
             </div>
         </main>

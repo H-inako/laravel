@@ -154,6 +154,10 @@ return [
         'password' => 'パスワード',
         'password_confirmation' => 'パスワード確認',
         'email' => 'メールアドレス',
+        'name' => '商品名',
+        'product_content' => '商品説明',
+        'product_category_id' => 'カテゴリ',
+        'product_subcategory_id' => 'サブカテゴリ'
     ],
 
 ];

@@ -146,11 +146,11 @@ unset($__errorArgs, $__bag); ?>
                         </td>
                 </table>
             </div>
-            <div class="bottun">
+            <div class="button">
             <input class="btn confirm" type="submit" value="確認画面へ">
             </div>
             </form> 
-            <div class="bottun">
+            <div class="button">
                 <a class="btn former" href="<?php echo e(route('top')); ?>">トップへ戻る</a>
             </div>
         </main>
